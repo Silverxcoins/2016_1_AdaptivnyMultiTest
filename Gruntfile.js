@@ -6,19 +6,15 @@ module.exports = function (grunt) {
             server: {
                 command: 'node server.js'            
             }
-            // запуск сервера через скрипт shell'a https://www.npmjs.com/package/grunt-shell
         },
 
         watch: {
             files: ['templates/*.xml'],
             tasks: ['fest']
-            // запуск watcher'a, который следит за изенениями файлов  templates/*.xml
-            // и если они изменяются, то запускает таск сборки шаблонов (grunt fest)
         },
         
         concurrent: {
             tasks: ['shell', 'watch']
-            // одновременный запуска shell'a и watcher'a https://www.npmjs.com/package/grunt-concurrent
         },
 
         fest: {
