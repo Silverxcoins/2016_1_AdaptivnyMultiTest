@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         },
         
         concurrent: {
-            tasks: ['shell', 'watch']
+            target: ['shell', 'watch']
         },
 
         fest: {
